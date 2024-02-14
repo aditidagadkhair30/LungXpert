@@ -1,0 +1,2 @@
+pneumonia 89.17% (RESNET101)
+covid: 93% (CNN)
