@@ -10,8 +10,6 @@ from tensorflow.keras.models import load_model
 # from pushbullet import PushBullet
 import joblib
 import numpy as np
-from tensorflow.keras.applications.vgg16 import preprocess_input
-
 
 # Loading Model
 pneumonia_model = load_model('models/pneumonia_model_resnet101.h5')
@@ -58,7 +56,7 @@ def resultp():
         phone = request.form['phone']
         gender = request.form['gender']
         age = request.form['age']
-        file = request.files['file']
+        file = request.files['file']    #input image
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
