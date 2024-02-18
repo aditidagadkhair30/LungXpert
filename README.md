@@ -13,7 +13,7 @@ Make sure you have Python installed on your system. You can download Python from
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/healthcare-application.git
+git clone https://github.com/adityadesity11/HealthcareSystem.git
 ```
 ###3. Navigae the project directory
 ### 4. Install Requirements
