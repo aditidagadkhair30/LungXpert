@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.accordion-item {
+    margin-bottom: 20px; /* Add margin bottom to create gap between each question */
+    background-color: rgb(186, 235, 186);
+    color: rgb(67, 67, 67);
+}
+/* .accordion-button{
+     border: 0.5px solid black;
+} */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+}
+.content-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-2{
+    padding: 9px;
+}
+.container p {
+    text-align: justify;
+}
+.filler{
+    height: 120px;
+}
+
+.rounded-btn {
+    border-radius: 50px; /* Adjust the value to make the button more or less round */
+    /* background-color: #007bff; Primary color for the button */
+    color: white; /* Text color */
+    border:white  2px solid; /* Remove default border */
+    border-radius: 40px;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+.rounded-btn:hover {
+    background-color: white; /* Darker shade of the primary color on hover */
+    color: #007bff;
+    border: white;
+    padding: 12px 24px;
+}
+.team-images{
+    justify-content: center;
+}
+.text {
+    text-align: justify;
+}
+
+ul li a{
+    font-family: "Merriweather", serif;
+}
+
+
+
+/* media queries */
+@media screen and (max-width:579px){
+.content-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content{
+    padding-top: 6px;
+}
+}
+@media screen and (max-width:945px){
+    .btn-txt{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&  display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&  family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&  family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"   rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{{url_for('static',filename='images/logo.png')}}" alt="" width="80" height="72">
+        <span style="margin-left: 2px;">
+         
+        </span>
+
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class=" collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active" href="/services">Services</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/faq">FAQs</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar ends -->
+
+  <!-- content -->
+  <div class="container-fluid" style="padding-top: 100px;padding-bottom: 30px; background-color: rgb(221, 253, 253);">
+    <div class="container mt-5">
+      <h2 class="mb-4" style="font-family: 'Playfair Display', serif;">FAQs</h2>
+      
+      <div class="accordion" id="accordionFAQ">
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <span class="me-2">What is pneumonia?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Pneumonia is a lung infection that can cause inflammation in the air sacs of one or both lungs. Pneumonia can be a serious and sometimes life-threatening condition, especially in older adults or people with weakened immune systems.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span class="me-2">How do you get pneumonia?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Pneumonia can be caused by a variety of different germs, including bacteria, viruses, and fungi. These germs are often spread through contact with infected people, or by inhaling droplets from an infected person’s cough or sneeze. People with weakened immune systems or underlying health conditions are more susceptible to developing pneumonia.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span class="me-2">What are the signs and symptoms of pneumonia?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              The symptoms of pneumonia may vary depending on the severity of the infection and the cause of the inflammation. Common symptoms include cough, chest pain, shortness of breath, fever, chills, and fatigue. 
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingfour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+              <span class="me-2">Who is at a high risk of getting pneumonia?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              People with weakened immune systems or underlying health conditions, such as heart disease, are at a higher risk of developing pneumonia. Other risk factors include being a smoker, living in crowded or unsanitary conditions, and exposure to certain chemicals or pollutants.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingfive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+              <span class="me-2">How is pneumonia treated?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Treatment for pneumonia depends on the underlying cause of the infection. Bacterial pneumonia is usually treated with antibiotics, while viral pneumonia may require antiviral medications. Supportive care, such as oxygen therapy and rest, may also be recommended.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingsix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+              <span class="me-2">What can you do to prevent pneumonia?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              To prevent pneumonia, it is important to practice good hygiene, such as washing your hands regularly and avoiding close contact with people who are sick. Quitting smoking, getting vaccinated for pneumonia, and managing underlying health conditions can also help reduce the risk of infection. Additionally, eating a healthy diet, getting enough sleep, and staying physically active can help boost the immune system and reduce the risk of developing pneumonia.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingseven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+              <span class="me-2">What is covid-19?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              COVID-19 infection is a disease caused by a novel coronavirus that leads to a respiratory illness and can be spread from person to person. COVID-19 has now spread globally, including to the United States. While COVID-19 is a "new" disease, coronaviruses have been known and studied for many years at the Perelman School of Medicine and other academic centers of research.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingeight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+              <span class="me-2">How does covid-19 spread?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              SARS-CoV-2, the virus that causes COVID-19, can spread from person to person through droplets produced during coughing or breathing during close contact with an infected individual. 
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingnine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
+              <span class="me-2">What are the symptoms of covid-19?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              The most common symptoms of COVID-19 are fever, cough and fatigue. Some patients may have loss of taste or smell, conjunctivitis, headache, muscle aches and pains, nasal congestion, runny nose, sore throat, diarrhea, nausea or vomiting, and different types of skin rashes.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingten">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+              <span class="me-2">What can I do to protect myself and prevent the spread of disease?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              • Clean your hands regularly and thoroughly with an alcohol-based hand rub or wash them with soap and water. 
+              <br> 
+              • Follow physical distancing rules of at least 1-2-meter distance between yourself and others. <br>
+              • Avoid touching your eyes, nose and mouth. <br>
+              • By following good respiratory hygiene, you protect the people around you from viruses such as the common cold, flu and COVID-19. <br>
+              • Wear a mask for the duration of your illness and while you have symptoms.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingeleven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
+              <span class="me-2">How is covid-19 treated?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapseeleven" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Severe illness: For those who are very sick, hospitalization is required. In the hospital, patients receive oxygen and other treatments to help their breathing as well as supportive care and very close monitoring. 
+              <br>
+              Mild to moderate illness: Most people who are infected do not get low oxygen levels and are able to stay home and monitor themselves for improvement or worsening. Over-the-counter medicines can be used to manage symptoms. 
+              <br>
+              Patients with the virus who are well enough to recover from home after they've been discharged, as well as patients who are confirmed or likely to have COVID-19 but not sick enough to need hospitalization, are supported from home using automated remote monitoring programs.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingtwelve">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
+              <span class="me-2">If I have covid-19, when can I end home isolation ?</span> <i class="bi bi-caret-down"></i>
+            </button>
+          </h2>
+          <div id="collapsetwelve" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              If you test positive for COVID-19, the CDC recommends that you stay home for five days, regardless of your vaccination status. If you have no or symptoms or your symptoms have resolved after five days, you can leave your house. You should continue to wear a mask around others for five additional days. If you have a fever, continue to stay home until your fever resolves.
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Add more accordion items as needed -->
+      </div>
+    </div>
+    
+  </div>
+
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Address</h5>
+            <p>123 Main Street</p>
+            <p>City, State, Zip</p>
+        </div>
+    </div>
+</div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -4,181 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&    display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&    family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&    family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..  900&display=swap" rel="stylesheet">
+
 </head>
-<style>
-    body {
-        margin: 0px;
-        padding: 0px;
-        background-color: rgb(205, 238, 238);
-    }
-
-    .headstyle {
-        color: rgb(255, 255, 255);
-        font-variant: petite-caps;
-        background-color: rgb(0, 0, 0, 0.8);
-        margin-bottom: 0px
-    }
-
-    .divstyle {
-        border-radius: 10px 10px 10px 10px;
-        margin-left: 1px;
-        margin-right: 1px
-    }
-
-    .container-1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 10px;
-        margin-top: 10px;
-    }
-</style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">Healthcure</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" id='nav-link' aria-current="page" href="/">Home</a>
-                    <a class="nav-link" id='nav-link' href="/pneumonia">Detect Pnemonia</a>
-                    <a class="nav-link" id='nav-link' href="/covid">Detect Covid</a>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" >
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="{{url_for('static',filename='images/logo.png')}}" alt="" width="80" height="72">
+                    <span style="margin-left: 2px;">
+                        
+                    </span>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class=" collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" >
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faq">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Navbar ends -->
+    <!-- <div class="container-fluid bg-primary filler">
+
+    </div> -->
+    <!-- Content -->
+    <div class="container-fluid content  bg-primary text-white mt-5">
+        <div class="row">
+
+            <div class="container col-sm-6" style="margin-top: 96px;">
+                <h1 style="font-family: 'Playfair Display', serif;">Your Most Trusted<br> <span style="font-family: 'Playfair Display', serif;">HEALTH PARTNER</span></h1> <br>
+            <p class="lead" style="font-family: 'DM Sans', sans-serif; font-style: italic;" >The best match services for you</p>
+            <br>
+                <p class="text " style="font-family: 'DM Sans', sans-serif;">
+                    Uncover a sense of tranquility with Lungxpert, a state-of-the-art application meticulously crafted
+                    to elevate your respiratory well-being. Leveraging advanced artificial intelligence, our technology
+                    swiftly and precisely analyzes lung images, providing you with a trustworthy tool for the early
+                    detection of pneumonia.
+                </p>
+                <div class="btn-txt" >
+                    <a href="/services">
+                        <button type="button" class="btn btn-outline-info rounded-btn">Learn More</button>
+
+                    </a>
                 </div>
+
             </div>
-        </div>
-    </nav>
-
-
-    <div class="container-fluid" style="background-color: rgb(255, 255, 255); margin-top: 25px;margin-bottom: 25px;">
-
-        <h1 class='text-center py-3' style="font-variant: petite-caps;margin-bottom:0px">
-            <b>
-                <i>
-                    Experience Tranquility with Healthcure: Your Premier Respiratory Wellness Companion
-                </i>
-            </b>
-        </h1>
-        <div class="container p-3">
-
-            Uncover a sense of tranquility with Healthcure, a state-of-the-art application meticulously crafted to
-            elevate your respiratory well-being. Leveraging advanced artificial intelligence, our technology swiftly and
-            precisely analyzes lung images, providing you with a trustworthy tool for the early detection of pneumonia.
+            <div class="container col-sm-6 d-flex align-items-center justify-content-center">
+                <img src="{{url_for('static',filename='images/Xray500.png')}}" class="img-fluid" alt="">
+            </div>
 
         </div>
     </div>
 
-    <div class="container-1">
-        <div style="background-color: rgb(255, 255, 255);width: 45%;">
-            <ul>
-                <li><strong>Welcome to Healthcure:</strong> where your respiratory health takes center stage. Our user-friendly platform empowers you to proactively monitor your lung health.</li>
-                <li><strong>Enter Your Details:</strong> Provide essential information to personalize your experience. Your privacy is our priority; your details are handled with the utmost confidentiality.</li>
-                <li><strong>Upload Lung Images:</strong> Capture and upload your lung images effortlessly. Our advanced technology analyzes these images swiftly and accurately to detect potential signs of pneumonia.</li>
-                <li><strong>Swift Detection:</strong> Healthcure utilizes cutting-edge artificial intelligence to perform rapid and reliable pneumonia detection. Receive timely insights into your respiratory well-being.</li>
-                <li><strong>Personalized Insights:</strong> Gain access to personalized insights based on the analysis of your lung images. Understand your respiratory health at a glance, empowering you to make informed decisions.</li>
-                <li><strong>Peace of Mind:</strong> Healthcure is more than a tool; it's your companion in respiratory wellness. Enjoy the peace of mind that comes with proactive health monitoring and early detection.</li>
-              </ul>
-              
-              <p>Ready to prioritize your lung health? <a href="/pneumonia">Click here</a> to start your pneumonia detection journey with Healthcure.</p>
-              
+
+    <div class="container-fluid content-2 ">
+
+        <div class="container">
+
+            <h2 style="font-family: 'DM Sans', sans-serif; font-style: italic;">AI in Healthcare</h2>
+            <p style="font-family: 'DM Sans', sans-serif;">
+                The artificial intelligence (AI) technologies becoming ever present in modern business and everyday life
+                is also steadily being applied to healthcare. The use of artificial intelligence in healthcare has the
+                potential to assist healthcare providers in many aspects of patient care and administrative processes.
+                Most AI and healthcare technologies have strong relevance to the healthcare field, but the tactics they
+                support can vary significantly. And while some articles on artificial intelligence in healthcare suggest
+                that the use of artificial intelligence in healthcare can perform just as well or better than humans at
+                certain procedures, such as diagnosing disease, it will be a significant number of years before AI in
+                healthcare replaces humans for a broad range of medical tasks.
+            </p>
         </div>
-        <div style="background-color: rgb(255, 255, 255);width: 45%;">
-            <img src="../static/icons/pneumonia.png" class="img-fluid rounded mx-auto d-block"
-                    style='width:auto; height:300px' alt="...">
+        <div class="container">
+            <img src="{{url_for('static',filename='images/header.png')}}" class="img-fluid " alt="">
         </div>
+
     </div>
 
 
-
-    <h3 class='text-center py-3'
-        style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
-        <b><i>AI in HealthCare</i></b>
-    </h3>
-    <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
-        <div class="row" style="padding: 12px;">
-            <div class="col-sm-6">The artificial intelligence (AI) technologies becoming ever present in modern business
-                and everyday life is also steadily being applied to healthcare. The use of artificial intelligence in
-                healthcare has the potential to assist healthcare providers in many aspects of patient care and
-                administrative processes. Most AI and healthcare technologies have strong relevance to the healthcare
-                field, but the tactics they support can vary significantly. And while some articles on artificial
-                intelligence in healthcare suggest that the use of artificial intelligence in healthcare can perform
-                just as well or better than humans at certain procedures, such as diagnosing disease, it will be a
-                significant number of years before AI in healthcare replaces humans for a broad range of medical tasks.
+    
+    
+    
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                <p>Email: example@example.com</p>
+                <p>Phone: +1234567890</p>
             </div>
-            <div class="col-sm-6">
-                <img src="../static/healthcure.png" class="img-fluid rounded mx-auto d-block"
-                    style='width:auto; height:300px' alt="...">
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
             </div>
-        </div>
-    </div>
-
-    <h3 class='text-center py-3'
-        style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
-        <b><i>Machine Learning</i></b>
-    </h3>
-
-    <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
-        <div class="row" style="padding: 12px;">
-            <div class="col-sm-6">Machine learning is one of the most common forms of artificial intelligence in
-                healthcare. It is a broad technique at the core of many approaches to AI and healthcare technology and
-                there are many versions of it. Using artificial intelligence in healthcare, the most widespread
-                utilization of traditional machine learning is precision medicine. Being able to predict what treatment
-                procedures are likely to be successful with patients based on their make-up and the treatment framework
-                is a huge leap forward for many healthcare organizations. The majority of AI in healthcare that uses
-                machine learning and precision medicine applications require data for training, for which the end result
-                is known. This is known as supervised learning.</div>
-            <div class="col-sm-6">
-                <img src="../static/ml.png" class="img-fluid rounded mx-auto d-block" style='width:auto; height:300px'
-                    alt="...">
+            <div class="col-md-4">
+                <h5>Address</h5>
+                <p>123 Main Street</p>
+                <p>City, State, Zip</p>
             </div>
         </div>
     </div>
+</footer>
 
-    <h3 class='text-center py-3'
-        style="color: rgb(255, 255, 255);font-variant: petite-caps;background-color: rgb(0, 0, 0);margin-bottom:0px">
-        <b><i>Natural Language Processing</i></b>
-    </h3>
-    <div class="container-fluid" style="background-color: rgb(255, 255, 255); ">
-        <div class="row" style="padding: 12px;">
-            <div class="col-sm-6">
-                Making sense of human language has been a goal of artificial intelligence and healthcare technology for
-                over 50 years. Most NLP systems include forms of speech recognition or text analysis and then
-                translation. A common use of artificial intelligence in healthcare involves NLP applications that can
-                understand and classify clinical documentation. NLP systems can analyze unstructured clinical notes on
-                patients, giving incredible insight into understanding quality, improving methods, and better results
-                for patients.
-            </div>
-            <div class="col-sm-6">
-                <img src="../static/nlp.jpg" class="img-fluid rounded mx-auto d-block" style='width:auto; height:300px'
-                    alt="...">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <footer class='text-light bg-dark position-relative '>
-        <p class='text-center py-1 my-0'>
-            Made by Aditi Dagadkhair
-        </p>
-    </footer>
-
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,11 +1,10 @@
-from flask import Flask, flash, request, redirect, url_for, render_template
+from flask import Flask, flash, request, redirect, url_for, render_template,url_for
 import urllib.request
 import os
 from werkzeug.utils import secure_filename
 import cv2
 import pickle
 import imutils
-import sklearn
 from tensorflow.keras.models import load_model
 # from pushbullet import PushBullet
 import joblib
@@ -33,7 +32,16 @@ def allowed_file(filename):
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
 
 @app.route('/pneumonia')
 def pneumonia():
