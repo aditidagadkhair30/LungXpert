@@ -50,6 +50,12 @@ body{
     border: white;
     padding: 12px 24px;
 }
+.rounded-circle:hover{
+    cursor: pointer;
+    padding: 4px;
+}
+
+
 .team-images{
     justify-content: center;
 }
