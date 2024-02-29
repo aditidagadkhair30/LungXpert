@@ -9,6 +9,11 @@ from tensorflow.keras.models import load_model
 # from pushbullet import PushBullet
 import joblib
 import numpy as np
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+
 
 # Loading Model
 pneumonia_model = load_model('models/pneumonia_model_resnet101.h5')
@@ -25,6 +30,83 @@ app.secret_key = "secret key"
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+def send_email_with_data( receiver_email, subject, data):
+    # Construct HTML content for the email
+    html_content = """
+    <html>
+    <head>
+        <style>
+            table {{
+                border-collapse: collapse;
+                width: 100%;
+            }}
+            th, td {{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }}
+            th {{
+                background-color: #f2f2f2;
+            }}
+            .positive {{
+                color: red;
+                font-weight: bold;
+            }}
+            .negative {{
+                color: green;
+                font-weight: bold;
+            }}
+        </style>
+    </head>
+    <body>
+        <h2>{} Test report</h2>
+        <table>
+            
+            <tr>
+                <td>First Name</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td class="{}">{}</td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    """.format(data['type'],data['firstname'], data['lastname'], data['email'], data['phone'], data['gender'].upper(), data['age'], data['message'].lower(), data['message'])
+    message = MIMEMultipart("alternative")
+    message["From"] = 'adityadesity02@gmail.com'
+    message["To"] = receiver_email
+    message["Subject"] = subject
+
+    # Add HTML content to the message
+    message.attach(MIMEText(html_content, "html"))
+
+    # Send the email
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+        server.login('adityadesity02@gmail.com', 'vjiiqtnqmvgrmgnz')
+        server.sendmail('adityadesity02@gmail.com', receiver_email, message.as_string())
 
 
 ########################### Routing Functions ########################################
@@ -74,11 +156,24 @@ def resultp():
             img = np.expand_dims(img,axis=0)
             img = img/255.0
             pred = pneumonia_model.predict(img)
+            message = "Pneumonia Negetive"
             if pred < 0.5:
                 pred = 0
             else:
+                message = "Pneumonia Positive"
                 pred = 1
-            # pb.push_sms(pb.devices[0],str(phone), 'Hello {},\nYour COVID-19 test results are ready.\nRESULT: {}'.format(firstname,['POSITIVE','NEGATIVE'][pred]))
+            # send_email(email=email,message=message)
+            data = {
+                 'firstname': firstname,
+                 'lastname': lastname,
+                 'email': email,
+                 'phone': phone,
+                 'gender': gender,
+                 'age': age,
+                 'message' : message,
+                 'type' : 'PNEUMONIA'
+                }
+            send_email_with_data(receiver_email=email,subject="Pneumonia Test Report",data=data)
             return render_template('resultp.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
         else:
@@ -103,11 +198,23 @@ def resultc():
             img = img.reshape(1, 224, 224, 3)
             img = img/255.0
             pred = covid_model.predict(img)
+            message = "Covid Negative"
             if pred < 0.5:
                 pred = 0
+                message = "Covid Positive"
             else:
                 pred = 1
-            # pb.push_sms(pb.devices[0],str(phone), 'Hello {},\nYour COVID-19 test results are ready.\nRESULT: {}'.format(firstname,['POSITIVE','NEGATIVE'][pred]))
+            data = {
+                 'firstname': firstname,
+                 'lastname': lastname,
+                 'email': email,
+                 'phone': phone,
+                 'gender': gender,
+                 'age': age,
+                 'message' : message,
+                 'type' : 'COVID 19'
+                }
+            send_email_with_data(receiver_email=email,subject="Pneumonia Test Report",data=data)
             return render_template('resultc.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
         else:
