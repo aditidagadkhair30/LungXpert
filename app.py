@@ -4,10 +4,8 @@ import os
 from werkzeug.utils import secure_filename
 import cv2
 import pickle
-import imutils
 from tensorflow.keras.models import load_model
 # from pushbullet import PushBullet
-import joblib
 import numpy as np
 import smtplib
 from email.mime.multipart import MIMEMultipart
