@@ -94,7 +94,7 @@ def send_email_with_data( receiver_email, subject, data):
     </html>
     """.format(data['type'],data['firstname'], data['lastname'], data['email'], data['phone'], data['gender'].upper(), data['age'], data['message'].lower(), data['message'])
     message = MIMEMultipart("alternative")
-    message["From"] = 'adityadesity02@gmail.com'
+    message["From"] = 'aditidagadkhair3011@gmail.com'
     message["To"] = receiver_email
     message["Subject"] = subject
 
@@ -103,8 +103,8 @@ def send_email_with_data( receiver_email, subject, data):
 
     # Send the email
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-        server.login('adityadesity02@gmail.com', 'vjiiqtnqmvgrmgnz')
-        server.sendmail('adityadesity02@gmail.com', receiver_email, message.as_string())
+        server.login('aditidagadkhair3011@gmail.com', 'esahbdetgodyhzoz')
+        server.sendmail('aditidagadkhair3011@gmail.com', receiver_email, message.as_string())
 
 
 ########################### Routing Functions ########################################
@@ -212,7 +212,7 @@ def resultc():
                  'message' : message,
                  'type' : 'COVID 19'
                 }
-            send_email_with_data(receiver_email=email,subject="Pneumonia Test Report",data=data)
+            send_email_with_data(receiver_email=email,subject="Covid 19 Test Report",data=data)
             return render_template('resultc.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
         else:
