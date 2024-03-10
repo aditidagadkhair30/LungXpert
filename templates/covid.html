@@ -102,12 +102,23 @@
         </div>
 
 
-        <div class='form-group'>
-            <label for="phone">Phone No.</label>
-            <input type="number" name="phone" id="phone" class="form-control" required='True'>
-            <small class='form-text ' style='color: #FFFFFF;'>* Include your area code</small>
+        
+        
+        <div class="row">
+            <div class="col">
+                <div class='form-group'>
+                    <label for="phone">Phone No.</label>
+                    <input type="number" name="phone" id="phone" class="form-control" required='True'>
+                    <small class='form-text ' style='color: #FFFFFF;'>* Include your area code</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class='form-group'>
+                    <label for="aadhar">Aadhar No.</label>
+                    <input type="number" name="aadhar" id="aadhar" class="form-control" required='True'>
+                </div>
+            </div>
         </div>
-
 
         <div class='form-group'>
             <label for="email">Email</label>
@@ -132,7 +143,10 @@
                 </div>
             </div>
         </div>
-
+        <div class='form-group'>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" class="form-control" required='True'>
+        </div>
         <div class='form-group'>
             <label for="inputGroupFile02">Upload your Chest Scan </label>
             <input type="file" class="form-control" id="file" name='file'>
