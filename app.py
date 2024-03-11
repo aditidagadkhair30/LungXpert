@@ -78,11 +78,19 @@ def send_email_with_data( receiver_email, subject, data):
                 <td>{}</td>
             </tr>
             <tr>
+                <td>Aadhar No. </td>
+                <td>{}</td>
+            </tr>
+            <tr>
                 <td>Gender</td>
                 <td>{}</td>
             </tr>
             <tr>
                 <td>Age</td>
+                <td>{}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
                 <td>{}</td>
             </tr>
             <tr>
@@ -92,7 +100,7 @@ def send_email_with_data( receiver_email, subject, data):
         </table>
     </body>
     </html>
-    """.format(data['type'],data['firstname'], data['lastname'], data['email'], data['phone'], data['gender'].upper(), data['age'], data['message'].lower(), data['message'])
+    """.format(data['type'],data['firstname'], data['lastname'], data['email'], data['phone'],data['aadhar'], data['gender'].upper(), data['age'],data['address'] ,data['message'].lower(), data['message'])
     message = MIMEMultipart("alternative")
     message["From"] = 'aditidagadkhair3011@gmail.com'
     message["To"] = receiver_email
@@ -144,6 +152,8 @@ def resultp():
         phone = request.form['phone']
         gender = request.form['gender']
         age = request.form['age']
+        aadhar = request.form['aadhar']
+        address = request.form['address']
         file = request.files['file']    #input image
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -154,7 +164,7 @@ def resultp():
             img = np.expand_dims(img,axis=0)
             img = img/255.0
             pred = pneumonia_model.predict(img)
-            message = "Pneumonia Negetive"
+            message = "Pneumonia Negative"
             if pred < 0.5:
                 pred = 0
             else:
@@ -169,10 +179,12 @@ def resultp():
                  'gender': gender,
                  'age': age,
                  'message' : message,
-                 'type' : 'PNEUMONIA'
+                 'type' : 'PNEUMONIA',
+                 'aadhar': aadhar,
+                 'address' : address
                 }
             send_email_with_data(receiver_email=email,subject="Pneumonia Test Report",data=data)
-            return render_template('resultp.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
+            return render_template('resultp.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender,aadhar=aadhar, address=address)
 
         else:
             flash('Allowed image types are - png, jpg, jpeg')
@@ -186,6 +198,8 @@ def resultc():
         phone = request.form['phone']
         gender = request.form['gender']
         age = request.form['age']
+        aadhar = request.form['aadhar']
+        address = request.form['address']
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -210,10 +224,12 @@ def resultc():
                  'gender': gender,
                  'age': age,
                  'message' : message,
-                 'type' : 'COVID 19'
+                 'type' : 'COVID 19',
+                 'aadhar': aadhar,
+                 'address' : address
                 }
             send_email_with_data(receiver_email=email,subject="Covid 19 Test Report",data=data)
-            return render_template('resultc.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
+            return render_template('resultc.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender,aadhar=aadhar,address=address)
 
         else:
             flash('Allowed image types are - png, jpg, jpeg')
