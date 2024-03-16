@@ -15,7 +15,7 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/adityadesity11/HealthcareSystem.git
 ```
-### 3. Navigae the project directory
+### 3. Navigate the project directory
 ### 4. Install Requirements
 **Install the required Python dependencies using pip**
 ```bash
