@@ -15,7 +15,7 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/adityadesity11/HealthcareSystem.git
 ```
-###3. Navigae the project directory
+### 3. Navigae the project directory
 ### 4. Install Requirements
 **Install the required Python dependencies using pip**
 ```bash
@@ -23,12 +23,15 @@ pip install -r requirements.txt
 
 ```
 
-### 5. Run the flask application
+### 5. Download models from https://drive.google.com/drive/folders/1S1PR5W5faOJb9R6wAyqp_hkfEOc15MN-?usp=sharing
+save it to models/
+
+### 6. Run the flask application
 ```bash
 python app.py
 ```
 
-### 6. Run it on localhost:5000
+### 7. Run it on localhost:5000
 
 
 
