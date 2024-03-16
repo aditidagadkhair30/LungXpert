@@ -32,6 +32,28 @@ body{
 .container p {
     text-align: justify;
 }
+
+.container-pneumonia{
+    padding: 20px;
+    background-color:rgb(249, 219, 219);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 2% 5%;
+    border-radius: 10px;
+    margin-top: 150px;
+    border: 2px solid black;
+  }
+
+  .container-covid{
+    padding: 20px;
+    /* background-color:rgb(244, 244, 233); */
+    background-color:rgb(249, 219, 219);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 2% 5%;
+    border-radius: 10px;
+    margin-top: 60px;
+    border: 2px solid black;
+  }
+
 .filler{
     height: 120px;
 }

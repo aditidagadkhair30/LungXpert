@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&    display=swap"
+        rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&    display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&    family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&    family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..  900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body style="background-color: rgb(221, 253, 253);">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="{{url_for('static',filename='images/logo.png')}}" alt="" width="92" height="88">
+                <span style="margin-left: 2px;">
+
+                </span>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class=" collapse navbar-collapse .justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" >
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/treatment">Treatment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/faq">FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    
+    <div class="container-pneumonia">
+        <h2 style="font-family: 'Playfair Display', serif;">PNEUMONIA</h2>
+        <h4><i>Symptoms :</i></h4>
+        <ol style="font-family: 'DM Sans', sans-serif;">
+            <li>Cough, often producing phlegm </li>
+            <li>High fever </li>
+            <li>Difficulty breathing or shortness of breath </li>
+            <li>Chest pain when breathing or coughing </li>
+            <li>Fatigue and weakness </li>
+            <li>Nausea, vomiting, or diarrhea (more common in bacterial pneumonia) </li>
+            <li>Bluish lips or nails (a sign of oxygen deprivation, more severe cases) </li>
+        </ol>
+        <br>
+        <h4 style="font-family: 'DM Sans', sans-serif;"><i>Available Treatment :</i></h4>
+            <h5><a href="https://www.mayoclinic.org/diseases-conditions/pneumonia/diagnosis-treatment/drc-20354210">Mayo Clinic</a></h5>
+            <h5><a href="https://www.verywellhealth.com/antibiotics-for-pneumonia-5185264">Verywell Health</a></h5>
+            <h5><a href="https://www.healthcentral.com/condition/pneumonia-treatment">Health Central</a></h5>
+            
+    </div>
+
+    <div class="container-covid">
+        <h2 style="font-family: 'Playfair Display', serif;">COVID - 19</h2>
+        <h4><i>Symptoms :</i></h4>
+        <ol style="font-family: 'DM Sans', sans-serif;">
+            <li>Fever or chills </li>
+            <li>Dry cough </li>
+            <li>Shortness of breath or difficulty breathing </li>
+            <li>Fatigue </li>
+            <li>Muscle or body aches </li>
+            <li>Headache </li>
+            <li>Loss of taste or smell </li>
+            <li>Sore throat </li>
+            <li>Congestion or runny nose </li>
+            <li>Nausea or vomiting, and diarrhea (less common but reported) </li>
+        </ol>
+        <br>
+        <h4 style="font-family: 'DM Sans', sans-serif;"><i>Available Treatment :</i></h4>
+            <h5><a href="https://www.medanta.org/patient-education-blog/monoclonal-antibody-therapy-an-effective-covid-19-treatment-now-available-in-india">Medanta </a></h5>
+            <h5><a href="https://www.mayoclinic.org/diseases-conditions/coronavirus/expert-answers/coronavirus-drugs/faq-20485627">Mayo Clinic</a></h5>
+            <h5><a href="https://www.healthdirect.gov.au/covid-19/treatment">Health Direct</a></h5>
+            
+    </div>
+    
+
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: aditidagadkhair@gmail.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>Department of Computer Engineering</p>
+                    <p>Pimpri Chinchwad College of Engineering</p>
+                    <p>Nigdi, Pune</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

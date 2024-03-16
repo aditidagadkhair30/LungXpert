@@ -24,7 +24,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.secret_key = "secret key"
+app.secret_key = "lungxpert"
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
@@ -130,6 +130,10 @@ def services():
 @app.route('/faq')
 def faq():
     return render_template('faq.html')
+@app.route('/treatment')
+def treatment():
+    return render_template('treatment.html')
+    
 
 @app.route('/pneumonia')
 def pneumonia():
@@ -184,7 +188,7 @@ def resultp():
                  'address' : address
                 }
             send_email_with_data(receiver_email=email,subject="Pneumonia Test Report",data=data)
-            return render_template('resultp.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender,aadhar=aadhar, address=address)
+            return render_template('resultp.html', filename=filename, fn=firstname, ln=lastname, age=age, r=pred, gender=gender,aadhar=aadhar, address=address, smell=smell, taste=taste, breathe=breathe)
 
         else:
             flash('Allowed image types are - png, jpg, jpeg')
