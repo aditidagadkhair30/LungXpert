@@ -111,7 +111,7 @@ def send_email_with_data( receiver_email, subject, data):
 
     # Send the email
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-        server.login('aditidagadkhair3011@gmail.com', 'esahbdetgodyhzoz')
+        server.login('aditidagadkhair3011@gmail.com', '****')
         server.sendmail('aditidagadkhair3011@gmail.com', receiver_email, message.as_string())
 
 
